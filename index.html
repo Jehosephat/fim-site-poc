@@ -15,18 +15,26 @@
       0%, 100% { box-shadow: 0 0 40px rgba(251,191,36,0.25); }
       50% { box-shadow: 0 0 80px rgba(251,191,36,0.55); }
     }
+    /* Subtle fade-in animation */
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.6s ease-out;
+    }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-50 antialiased">
   <!-- Top Bar -->
   <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur z-30 sticky top-0">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#top" class="flex items-center gap-2">
-        <div class="h-8 w-8 rounded-full bg-gradient-to-br from-amber-400 to-pink-500 flex items-center justify-center font-black text-slate-950 text-xs">
+      <a href="#top" class="flex items-center gap-2 group">
+        <div class="h-8 w-8 rounded-full bg-gradient-to-br from-amber-400 to-pink-500 flex items-center justify-center font-black text-slate-950 text-xs shadow-lg shadow-amber-400/30 group-hover:shadow-amber-400/50 transition-shadow">
           FIM
         </div>
         <div>
-          <div class="font-semibold tracking-tight text-sm sm:text-base">FIMCOIN</div>
+          <div class="font-semibold tracking-tight text-sm sm:text-base group-hover:text-amber-300 transition-colors">FIMCOIN</div>
           <div class="text-[10px] text-amber-300/80 uppercase tracking-[0.2em]">Louis King</div>
         </div>
       </a>
@@ -47,9 +55,9 @@
     </div>
   </header>
 
-  <main id="top" class="max-w-6xl mx-auto px-4 pb-20 pt-10 space-y-24">
+  <main id="top" class="max-w-6xl mx-auto px-4 pb-20 pt-10 space-y-20 sm:space-y-24">
     <!-- HERO -->
-    <section class="grid md:grid-cols-2 gap-10 items-center">
+    <section class="grid md:grid-cols-2 gap-10 items-center animate-fade-in">
       <div class="space-y-6">
         <p class="text-xs font-semibold tracking-[0.35em] uppercase text-amber-300">
           LOUIS KING × WEB3 MUSIC
@@ -103,23 +111,35 @@
       <div class="flex justify-center">
         <div class="relative">
           <div
-            class="h-52 w-52 sm:h-64 sm:w-64 rounded-full bg-gradient-to-br from-amber-400 via-pink-500 to-emerald-400 flex items-center justify-center animate-[pulse-glow_3s_ease-in-out_infinite]"
+            class="h-52 w-52 sm:h-64 sm:w-64 rounded-full bg-gradient-to-br from-amber-400 via-pink-500 to-emerald-400 flex items-center justify-center animate-[pulse-glow_3s_ease-in-out_infinite] overflow-hidden"
           >
-            <div class="h-40 w-40 sm:h-48 sm:w-48 rounded-full bg-slate-950/90 border border-amber-300 flex flex-col items-center justify-center gap-1">
-              <div class="text-[11px] uppercase tracking-[0.35em] text-amber-300 font-semibold">
-                FIMCOIN
-              </div>
-              <div class="text-3xl sm:text-4xl font-black">FIM</div>
-              <div class="text-[10px] text-slate-400">Louis King Memecoin</div>
-            </div>
+            <img
+              src="assets/profile.png"
+              alt="Louis King - Famous in the Metaverse"
+              class="h-full w-full object-cover rounded-full"
+            />
           </div>
-          <div class="absolute -bottom-6 -right-4 bg-slate-900/90 border border-slate-700 rounded-2xl px-4 py-2 text-xs shadow-xl">
+          <div class="absolute -bottom-6 -right-4 bg-slate-900/90 border border-slate-700 rounded-2xl px-4 py-2 text-xs shadow-xl backdrop-blur-sm">
             <p class="text-[10px] uppercase tracking-[0.25em] text-emerald-300 font-semibold mb-1">
               BUILT FOR MUSIC
             </p>
             <p class="text-slate-200">Seamless GALA Music integration is the core utility.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ARTIST BANNER -->
+    <section class="relative w-full -mx-4 sm:-mx-6 rounded-2xl overflow-hidden">
+      <img
+        src="https://cdn.sanity.io/images/yiv3ppqn/production/91c7fb4600f6a6811931988fb95a0b92d429fbe3-1440x500.png?q=100&auto=format"
+        alt="Louis King"
+        class="w-full h-48 sm:h-64 object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
+      <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6">
+        <p class="text-xs sm:text-sm font-semibold text-amber-300 uppercase tracking-[0.2em]">Featured Artist</p>
+        <p class="text-lg sm:text-2xl font-bold text-white mt-1">Louis King</p>
       </div>
     </section>
 
@@ -137,10 +157,26 @@
           <span class="font-semibold">music utility</span>, designed to plug into a growing decentralized media
           stack.
         </p>
+        <div class="pt-4 flex items-center gap-3">
+          <img
+            src="https://cdn.sanity.io/images/yiv3ppqn/production/5d4319ce077192f3002c43d84816a42f966e43e4-400x400.png?auto=format"
+            alt="Louis King"
+            class="w-16 h-16 rounded-full border-2 border-amber-400/50 object-cover"
+          />
+          <div>
+            <p class="text-xs text-slate-400 uppercase tracking-[0.2em]">Artist Profile</p>
+            <p class="text-sm font-semibold text-amber-300">Famous in the Metaverse</p>
+          </div>
+        </div>
       </div>
 
-      <div class="space-y-3 border border-slate-800 rounded-3xl p-5 bg-slate-900/40">
-        <h3 class="font-semibold text-sm text-slate-200 uppercase tracking-[0.25em]">Quick Facts</h3>
+      <div class="space-y-3 border border-slate-800 rounded-3xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-amber-400/30 transition-colors">
+        <h3 class="font-semibold text-sm text-slate-200 uppercase tracking-[0.25em] flex items-center gap-2">
+          <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Quick Facts
+        </h3>
         <dl class="space-y-2 text-sm">
           <div class="flex justify-between gap-4">
             <dt class="text-slate-400">Token Name</dt>
@@ -188,19 +224,19 @@
 
       <!-- Overview cards -->
       <div class="grid sm:grid-cols-3 gap-4">
-        <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40">
+        <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 backdrop-blur-sm hover:border-amber-400/30 transition-colors">
           <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-[0.25em] mb-2">Total Supply</h3>
           <p class="text-lg font-semibold">10,000,000 FIM</p>
           <p class="text-xs text-slate-400 mt-1">Permanently capped, no inflation.</p>
         </div>
-        <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40">
+        <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 backdrop-blur-sm hover:border-pink-500/30 transition-colors">
           <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-[0.25em] mb-2">Creator Buy-In</h3>
           <p class="text-lg font-semibold">50% at Genesis</p>
           <p class="text-xs text-slate-400 mt-1">
             Louis King purchases 5,000,000 FIM to seed liquidity and show skin in the game.
           </p>
         </div>
-        <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40">
+        <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 backdrop-blur-sm hover:border-emerald-400/30 transition-colors">
           <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-[0.25em] mb-2">Public & Ecosystem</h3>
           <p class="text-lg font-semibold">50% for the Community</p>
           <p class="text-xs text-slate-400 mt-1">
@@ -212,7 +248,7 @@
       <!-- Allocation breakdown -->
       <div class="grid lg:grid-cols-2 gap-8">
         <!-- Creator allocation -->
-        <div class="space-y-3 border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
+        <div class="space-y-3 border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-amber-400/30 transition-colors">
           <h3 class="font-semibold text-sm text-slate-200 uppercase tracking-[0.25em]">
             1. Token Creator Allocation — 50%
           </h3>
@@ -232,7 +268,7 @@
         </div>
 
         <!-- Public & ecosystem allocation -->
-        <div class="space-y-4 border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
+        <div class="space-y-4 border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-emerald-400/30 transition-colors">
           <h3 class="font-semibold text-sm text-slate-200 uppercase tracking-[0.25em]">
             2. Public & Ecosystem Allocation — 50%
           </h3>
@@ -332,8 +368,13 @@
 
       <div class="grid md:grid-cols-3 gap-4 text-sm">
         <!-- Track Purchases -->
-        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
-          <h3 class="font-semibold text-slate-200 mb-2">Track &amp; Collectible Purchases</h3>
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-emerald-400/30 transition-colors">
+          <h3 class="font-semibold text-slate-200 mb-2 flex items-center gap-2">
+            <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+            </svg>
+            Track &amp; Collectible Purchases
+          </h3>
           <p class="text-slate-300 mb-2">
             FIMCOIN aims to become a preferred payment method for:
           </p>
@@ -346,8 +387,13 @@
         </div>
 
         <!-- Creator Engagement -->
-        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
-          <h3 class="font-semibold text-slate-200 mb-2">Creator &amp; Fan Engagement</h3>
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-amber-400/30 transition-colors">
+          <h3 class="font-semibold text-slate-200 mb-2 flex items-center gap-2">
+            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            Creator &amp; Fan Engagement
+          </h3>
           <p class="text-slate-300 mb-2">
             Artists can experiment with new FIM-powered experiences:
           </p>
@@ -359,8 +405,13 @@
         </div>
 
         <!-- Future Expansion -->
-        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40">
-          <h3 class="font-semibold text-slate-200 mb-2">Future Platform Utility</h3>
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-pink-500/30 transition-colors">
+          <h3 class="font-semibold text-slate-200 mb-2 flex items-center gap-2">
+            <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            Future Platform Utility
+          </h3>
           <p class="text-slate-300 mb-2">
             Possible future extensions of FIMCOIN include:
           </p>
@@ -403,8 +454,8 @@
 
       <div class="grid md:grid-cols-3 gap-4 text-sm">
         <!-- Phase 1 -->
-        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 relative">
-          <span class="absolute -top-3 left-4 text-[11px] px-2 py-0.5 rounded-full bg-emerald-400 text-slate-950 font-semibold">
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-emerald-400/30 transition-colors relative">
+          <span class="absolute -top-3 left-4 text-[11px] px-2 py-0.5 rounded-full bg-emerald-400 text-slate-950 font-semibold shadow-lg">
             Phase 1
           </span>
           <h3 class="font-semibold text-slate-200 mt-2 mb-2">Token Launch</h3>
@@ -417,8 +468,8 @@
         </div>
 
         <!-- Phase 2 -->
-        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 relative">
-          <span class="absolute -top-3 left-4 text-[11px] px-2 py-0.5 rounded-full bg-amber-400 text-slate-950 font-semibold">
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-amber-400/30 transition-colors relative">
+          <span class="absolute -top-3 left-4 text-[11px] px-2 py-0.5 rounded-full bg-amber-400 text-slate-950 font-semibold shadow-lg">
             Phase 2
           </span>
           <h3 class="font-semibold text-slate-200 mt-2 mb-2">Platform Integration</h3>
@@ -430,8 +481,8 @@
         </div>
 
         <!-- Phase 3 -->
-        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 relative">
-          <span class="absolute -top-3 left-4 text-[11px] px-2 py-0.5 rounded-full bg-sky-400 text-slate-950 font-semibold">
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-sky-400/30 transition-colors relative">
+          <span class="absolute -top-3 left-4 text-[11px] px-2 py-0.5 rounded-full bg-sky-400 text-slate-950 font-semibold shadow-lg">
             Phase 3
           </span>
           <h3 class="font-semibold text-slate-200 mt-2 mb-2">Expansion</h3>
@@ -441,6 +492,122 @@
             <li>Broader partner integrations &amp; collabs</li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <!-- FEATURED TRACKS -->
+    <section class="space-y-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Featured Tracks on GALA Music</h2>
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mt-2">
+          Own these tracks and earn daily token distributions based on listens. The more popular the track, the greater the rewards.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <a
+          href="https://music.gala.com/artists/louis-king"
+          target="_blank"
+          class="group relative aspect-square rounded-xl overflow-hidden border border-slate-800 hover:border-amber-300 transition-all hover:scale-105"
+        >
+          <img
+            src="https://tokens.gala.games/assets/gala-music/gala-music/louis-king/tracks/highlights-prod.-by-lid--casflow.gif"
+            alt="Highlights (prod. by LiD & CasFlow)"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-2 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            Highlights
+          </div>
+        </a>
+        <a
+          href="https://music.gala.com/artists/louis-king"
+          target="_blank"
+          class="group relative aspect-square rounded-xl overflow-hidden border border-slate-800 hover:border-amber-300 transition-all hover:scale-105"
+        >
+          <img
+            src="https://tokens.gala.games/assets/gala-music/gala-music/louis-king/tracks/palms-trap-prod.-lid.gif"
+            alt="Palms Trap (prod. LiD)"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-2 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            Palms Trap
+          </div>
+        </a>
+        <a
+          href="https://music.gala.com/artists/louis-king"
+          target="_blank"
+          class="group relative aspect-square rounded-xl overflow-hidden border border-slate-800 hover:border-amber-300 transition-all hover:scale-105"
+        >
+          <img
+            src="https://tokens.gala.games/music/selfservice/tracks/419076bd-e0eb-49bd-8703-3fb5d2f8385b/image.gif"
+            alt="Lookin' Fly (feat. Ayzha Nyree)"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-2 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            Lookin' Fly
+          </div>
+        </a>
+        <a
+          href="https://music.gala.com/artists/louis-king"
+          target="_blank"
+          class="group relative aspect-square rounded-xl overflow-hidden border border-slate-800 hover:border-amber-300 transition-all hover:scale-105"
+        >
+          <img
+            src="https://tokens.gala.games/music/selfservice/tracks/2cfced00-22b4-4ac0-9368-d18f81564730/image.gif"
+            alt="Bacontop (prod. LiD)"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-2 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            Bacontop
+          </div>
+        </a>
+        <a
+          href="https://music.gala.com/artists/louis-king"
+          target="_blank"
+          class="group relative aspect-square rounded-xl overflow-hidden border border-slate-800 hover:border-amber-300 transition-all hover:scale-105"
+        >
+          <img
+            src="https://tokens.gala.games/assets/gala-music/gala-music/louis-king/anybody-(feat.-ab-soul)/f71baa74f3e1e4c34bbf57a7fabbafd9d2a8971b-512x512.gif"
+            alt="Anybody (feat. Ab-Soul)"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-2 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            Anybody
+          </div>
+        </a>
+        <a
+          href="https://music.gala.com/artists/louis-king"
+          target="_blank"
+          class="group relative aspect-square rounded-xl overflow-hidden border border-slate-800 hover:border-amber-300 transition-all hover:scale-105"
+        >
+          <img
+            src="https://tokens.gala.games/assets/gala-music/gala-music/louis-king/spotlight-(feat.-curren$y)/297b2132b1aa8de2348b4135f9c90fb05681a950-512x512.gif"
+            alt="Spotlight (feat. Curren$y)"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-2 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            Spotlight
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center">
+        <a
+          href="https://music.gala.com/artists/louis-king"
+          target="_blank"
+          class="inline-flex items-center gap-2 rounded-full border border-amber-400/50 text-amber-300 px-6 py-2 text-sm font-semibold hover:bg-amber-400/10 hover:border-amber-400 transition"
+        >
+          View All Tracks on GALA Music
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
       </div>
     </section>
 
@@ -455,10 +622,17 @@
         <a
           href="https://music.gala.com/artists/louis-king"
           target="_blank"
-          class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 hover:border-amber-300 hover:bg-slate-900 transition flex flex-col justify-between"
+          class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 hover:border-amber-300 hover:bg-slate-900 transition flex flex-col justify-between backdrop-blur-sm group"
         >
           <div>
-            <h3 class="font-semibold text-slate-50 mb-1">GALA Music</h3>
+            <div class="flex items-center gap-2 mb-2">
+              <img
+                src="https://cdn.sanity.io/images/yiv3ppqn/production/5d4319ce077192f3002c43d84816a42f966e43e4-400x400.png?auto=format"
+                alt="GALA Music"
+                class="w-8 h-8 rounded-full border border-amber-400/30 object-cover group-hover:border-amber-400 transition"
+              />
+              <h3 class="font-semibold text-slate-50">GALA Music</h3>
+            </div>
             <p class="text-slate-300 text-xs">
               Listen to Louis King, explore drops, and see how Web3 music works.
             </p>
@@ -471,10 +645,15 @@
         <a
           href="https://x.com/LouiiKing"
           target="_blank"
-          class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 hover:border-amber-300 hover:bg-slate-900 transition flex flex-col justify-between"
+          class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 hover:border-amber-300 hover:bg-slate-900 transition flex flex-col justify-between backdrop-blur-sm group"
         >
           <div>
-            <h3 class="font-semibold text-slate-50 mb-1">X (Twitter)</h3>
+            <h3 class="font-semibold text-slate-50 mb-1 flex items-center gap-2">
+              <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-300 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              X (Twitter)
+            </h3>
             <p class="text-slate-300 text-xs">
               Get FIMCOIN updates, memes, and live commentary straight from Louis King.
             </p>
@@ -487,10 +666,15 @@
         <a
           href="https://www.instagram.com/LouiiKing/"
           target="_blank"
-          class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 hover:border-amber-300 hover:bg-slate-900 transition flex flex-col justify-between"
+          class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 hover:border-amber-300 hover:bg-slate-900 transition flex flex-col justify-between backdrop-blur-sm group"
         >
           <div>
-            <h3 class="font-semibold text-slate-50 mb-1">Instagram</h3>
+            <h3 class="font-semibold text-slate-50 mb-1 flex items-center gap-2">
+              <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-300 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              Instagram
+            </h3>
             <p class="text-slate-300 text-xs">
               Behind-the-scenes, visuals, and stories from the FIM ecosystem.
             </p>
