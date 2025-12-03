@@ -23,6 +23,14 @@
     .animate-fade-in {
       animation: fade-in 0.6s ease-out;
     }
+    /* Scrolling banner animation */
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+      animation: scroll 30s linear infinite;
+    }
   </style>
 </head>
 <body class="bg-slate-950 text-slate-50 antialiased">
@@ -39,11 +47,10 @@
         </div>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#about" class="hover:text-amber-300 transition">About</a>
-        <a href="#tokenomics" class="hover:text-amber-300 transition">Tokenomics</a>
-        <a href="#utility" class="hover:text-amber-300 transition">Utility</a>
+        <a href="#about" class="hover:text-amber-300 transition">Artist</a>
+        <a href="#tokenomics" class="hover:text-amber-300 transition">SmoovCoin</a>
         <a href="#roadmap" class="hover:text-amber-300 transition">Roadmap</a>
-        <a href="#links" class="hover:text-amber-300 transition">Listen</a>
+        <a href="#links" class="hover:text-amber-300 transition">Tracks</a>
       </nav>
       <a
         href="https://music.gala.com/artists/jp-cali-smoov"
@@ -60,51 +67,49 @@
     <section class="grid md:grid-cols-2 gap-10 items-center animate-fade-in">
       <div class="space-y-6">
         <p class="text-xs font-semibold tracking-[0.35em] uppercase text-amber-300">
-          JP CALI SMOOV × WEB3 MUSIC
+          <span class="inline-flex items-center gap-1">LIVE</span> JP Cali Smoov • Artist Coin
         </p>
-        <h1 class="text-4xl sm:text-5xl font-black tracking-tight">
-          SmoovCoin:
+        <h1 class="text-4xl sm:text-5xl font-black tracking-tight leading-tight">
           <span class="bg-gradient-to-r from-amber-400 via-pink-500 to-emerald-400 bg-clip-text text-transparent">
-            The Sound of the Memecoin Era
+            SmoovCoin:
           </span>
+          <br />
+          <span class="text-slate-50">The West Coast Memecoin Movement</span>
         </h1>
         <p class="text-sm sm:text-base text-slate-300 max-w-xl">
-          SmoovCoin is the community memecoin from artist
-          <span class="font-semibold text-amber-300">JP Cali Smoov</span>, built to plug into the
-          <span class="font-semibold">GALA Music</span> ecosystem. Use it to tap into tracks, drops, and
-          future on-chain music utilities — all while riding the vibes of the Smoov community.
+          A fan-powered coin orbiting JP Cali Smoov's mission to change the world. Battle rap, community, and music culture blended into one on-chain story.
         </p>
 
         <div class="flex flex-wrap gap-3">
-          <!-- Replace this with your buy link when live -->
           <a
             href="#tokenomics"
             class="inline-flex items-center gap-2 rounded-full bg-emerald-400 text-slate-950 px-5 py-2 text-sm font-semibold shadow-lg shadow-emerald-400/30 hover:bg-emerald-300 transition"
           >
-            View Tokenomics
+            How it works
           </a>
           <a
             href="#links"
             class="inline-flex items-center gap-2 rounded-full border border-slate-600 px-5 py-2 text-sm font-semibold hover:border-amber-300 hover:text-amber-200 transition"
           >
-            Join the Community
+            Tap In
           </a>
         </div>
 
         <dl class="grid grid-cols-3 gap-4 text-xs sm:text-sm">
           <div>
-            <dt class="text-slate-400">Total Supply</dt>
-            <dd class="font-semibold">10,000,000 SMV</dd>
+            <dt class="text-slate-400">Artist</dt>
+            <dd class="font-semibold">JP Cali Smoov</dd>
           </div>
           <div>
-            <dt class="text-slate-400">Supply Type</dt>
-            <dd class="font-semibold">Fixed / Non-inflationary</dd>
+            <dt class="text-slate-400">Ecosystem</dt>
+            <dd class="font-semibold">Gala Music</dd>
           </div>
           <div>
-            <dt class="text-slate-400">Primary Utility</dt>
-            <dd class="font-semibold">GALA Music tracks</dd>
+            <dt class="text-slate-400">Ticker</dt>
+            <dd class="font-semibold">$SMV</dd>
           </div>
         </dl>
+        <p class="text-xs text-slate-400 italic">SmoovCoin — On a mission to change the world, one bar at a time.</p>
       </div>
 
       <!-- Hero Visual -->
@@ -121,42 +126,71 @@
           </div>
           <div class="absolute -bottom-6 -right-4 bg-slate-900/90 border border-slate-700 rounded-2xl px-4 py-2 text-xs shadow-xl backdrop-blur-sm">
             <p class="text-[10px] uppercase tracking-[0.25em] text-emerald-300 font-semibold mb-1">
-              BUILT FOR MUSIC
+              🎤 BATTLE TESTED
             </p>
-            <p class="text-slate-200">Seamless GALA Music integration is the core utility.</p>
+            <p class="text-slate-200">Real bars, real community, real utility.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ARTIST BANNER -->
-    <section class="relative w-full -mx-4 sm:-mx-6 rounded-2xl overflow-hidden">
-      <img
-        src="assets/tokenlogo-black-background.jpg"
-        alt="JP Cali Smoov"
-        class="w-full h-48 sm:h-64 object-cover"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent"></div>
-      <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6">
-        <p class="text-xs sm:text-sm font-semibold text-amber-300 uppercase tracking-[0.2em]">Featured Artist</p>
-        <p class="text-lg sm:text-2xl font-bold text-white mt-1">JP Cali Smoov</p>
+    <!-- SCROLLING BANNER -->
+    <section class="relative w-full -mx-4 sm:-mx-6 overflow-hidden border-y border-slate-800 py-3">
+      <div class="flex animate-scroll whitespace-nowrap text-xs sm:text-sm text-slate-400">
+        <span class="mx-4">◆JP Cali Smoov • OnAMission2ChangeThe🌎 • SmoovCoin • Battle rap meets Web3◆</span>
+        <span class="mx-4">◆JP Cali Smoov • OnAMission2ChangeThe🌎 • SmoovCoin • Battle rap meets Web3◆</span>
+        <span class="mx-4">◆JP Cali Smoov • OnAMission2ChangeThe🌎 • SmoovCoin • Battle rap meets Web3◆</span>
+        <span class="mx-4">◆JP Cali Smoov • OnAMission2ChangeThe🌎 • SmoovCoin • Battle rap meets Web3◆</span>
+        <span class="mx-4">◆JP Cali Smoov • OnAMission2ChangeThe🌎 • SmoovCoin • Battle rap meets Web3◆</span>
       </div>
     </section>
 
     <!-- ABOUT JP CALI SMOOV / SMOOVCOIN STORY -->
     <section id="about" class="grid md:grid-cols-[1.1fr,0.9fr] gap-10 items-start">
       <div class="space-y-4">
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Who is JP Cali Smoov?</h2>
+        <p class="text-xs font-semibold text-amber-300 uppercase tracking-[0.25em]">The Artist</p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">JP Cali Smoov</h2>
         <p class="text-sm sm:text-base text-slate-300">
-          JP Cali Smoov is a global touring artist and early pioneer in Web3 music, using
-          <span class="font-semibold">GALA Music</span> to flip old industry models and connect directly with fans.
-          SmoovCoin is his next experiment in culture, ownership, and community.
+          A battle rap champion, community activist, and genre-bending force whose catalog stretches from gritty West Coast hip-hop to cinematic metaverse experiences — now bringing that same energy into Web3 and on-chain fandom.
         </p>
-        <p class="text-sm sm:text-base text-slate-300">
-          Think of SmoovCoin as the on-chain energy drink for the Smoov community — a memecoin with real
-          <span class="font-semibold">music utility</span>, designed to plug into a growing decentralized media
-          stack.
-        </p>
+        <div class="grid sm:grid-cols-2 gap-4 pt-4">
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-lg">🎤</span>
+              <h3 class="font-semibold text-slate-200">Battle-tested bars</h3>
+            </div>
+            <p class="text-xs text-slate-400">
+              Winner of Hitman Holla's reality show. Real battle rap credentials, not just studio polish.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-lg">🌐</span>
+              <h3 class="font-semibold text-slate-200">Metaverse-native</h3>
+            </div>
+            <p class="text-xs text-slate-400">
+              From GALA Film series to on-chain releases, the catalog is designed to live in a Web3 era.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-lg">✊🏾</span>
+              <h3 class="font-semibold text-slate-200">Community first</h3>
+            </div>
+            <p class="text-xs text-slate-400">
+              Food drives, community work, and real engagement — not just music, but movement.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-lg">🎵</span>
+              <h3 class="font-semibold text-slate-200">Story-driven music</h3>
+            </div>
+            <p class="text-xs text-slate-400">
+              Projects like "Cry Baby" turn into narratives, visuals, and live moments that reward real fans.
+            </p>
+          </div>
+        </div>
         <div class="pt-4 flex items-center gap-3">
           <img
             src="assets/tokenlogo.jpg"
@@ -207,19 +241,132 @@
       </div>
     </section>
 
+    <!-- THE CONCEPT -->
+    <section class="space-y-6">
+      <div>
+        <p class="text-xs font-semibold text-amber-300 uppercase tracking-[0.25em]">The Concept</p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">What is SmoovCoin?</h2>
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mt-2">
+          SmoovCoin is a memetic, music-driven coin concept inspired by JP Cali Smoov's mission to change the world. It's about fans moving with the artist, not just watching from the timeline.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm">
+          <h3 class="font-semibold text-slate-200 mb-3 flex items-center gap-2">
+            <span class="text-lg">💡</span>
+            The idea
+          </h3>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400 mt-1">→</span>
+              <span>Connect the energy of JP's on-chain drops with a simple, recognizable coin: $SMV.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400 mt-1">→</span>
+              <span>Turn "OnAMission2ChangeThe🌎" from a tagline into a banner the community can rally behind.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400 mt-1">→</span>
+              <span>Build tools, art and utilities around music culture, not corporate roadmaps.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm">
+          <h3 class="font-semibold text-slate-200 mb-3 flex items-center gap-2">
+            <span class="text-lg">🔥</span>
+            The vibe
+          </h3>
+          <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+            <li>Music first, memes second, nonsense third.</li>
+            <li>Fans as co-pilots, not background characters.</li>
+            <li>A coin that exists because the music and its world deserved its own symbol.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY IT MAKES SENSE -->
+    <section class="space-y-6">
+      <div>
+        <p class="text-xs font-semibold text-amber-300 uppercase tracking-[0.25em]">The Reason</p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Why it actually makes sense</h2>
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mt-2">
+          Artist-driven coins only work when the artist lives in the space. JP has already been building with Web3 tech, GALA Film series, and on-chain music drops — SmoovCoin just gives the movement a ticker.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm">
+          <h3 class="font-semibold text-slate-200 mb-2 flex items-center gap-2">
+            <span class="text-lg">⛓️</span>
+            Music that already lives on-chain
+          </h3>
+          <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>Tracks and moments built for digital ownership, not just ads.</li>
+            <li>Fans used to collecting, not just streaming and forgetting.</li>
+            <li>A catalog that fits naturally into a token-backed universe.</li>
+          </ul>
+        </div>
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm">
+          <h3 class="font-semibold text-slate-200 mb-2 flex items-center gap-2">
+            <span class="text-lg">🎨</span>
+            Culture > speculation
+          </h3>
+          <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+            <li>Built around songs, visuals and shows.</li>
+            <li>Memes and lore pulled from real releases and moments.</li>
+            <li>No fake promises — it's about music culture and community.</li>
+          </ul>
+        </div>
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm">
+          <h3 class="font-semibold text-slate-200 mb-2 flex items-center gap-2">
+            <span class="text-lg">🚀</span>
+            Mission-driven movement
+          </h3>
+          <p class="text-sm text-slate-300">
+            SmoovCoin takes the "OnAMission2ChangeThe🌎" banner and turns it into a unit of hype. Tracks, drops, community work and experiences can all orbit around the same symbol: $SMV.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- TOKENOMICS -->
     <section id="tokenomics" class="space-y-8">
       <div class="flex flex-col sm:flex-row sm:items-end gap-3 justify-between">
         <div>
-          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">SmoovCoin Tokenomics</h2>
-          <p class="text-sm sm:text-base text-slate-300 max-w-2xl">
-            SmoovCoin is built around a simple idea: fixed supply, clear early liquidity, and real music-driven
-            demand. No confusing math, no runaway emissions.
+          <p class="text-xs font-semibold text-amber-300 uppercase tracking-[0.25em]">The Details</p>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Fair Launch Tokenomics</h2>
+          <p class="text-sm sm:text-base text-slate-300 max-w-2xl mt-2">
+            SmoovCoin launches with a fixed supply and clear allocation. No confusing math, no runaway emissions — just real music-driven demand.
           </p>
         </div>
-        <span class="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-slate-300">
-          100% Transparent Launch
-        </span>
+        <div class="flex flex-wrap gap-2">
+          <span class="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-slate-300">
+            Fair Launch
+          </span>
+          <span class="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-slate-300">
+            No Presale
+          </span>
+        </div>
+      </div>
+
+      <!-- Token Details -->
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm">
+        <div>
+          <dt class="text-xs text-slate-400 uppercase tracking-[0.25em] mb-1">Name</dt>
+          <dd class="font-semibold text-sm">SmoovCoin</dd>
+        </div>
+        <div>
+          <dt class="text-xs text-slate-400 uppercase tracking-[0.25em] mb-1">Ticker</dt>
+          <dd class="font-semibold text-sm">$SMV</dd>
+        </div>
+        <div>
+          <dt class="text-xs text-slate-400 uppercase tracking-[0.25em] mb-1">Total Supply</dt>
+          <dd class="font-semibold text-sm">10,000,000 SMV</dd>
+        </div>
+        <div>
+          <dt class="text-xs text-slate-400 uppercase tracking-[0.25em] mb-1">Supply Type</dt>
+          <dd class="font-semibold text-sm">Fixed, non-inflationary</dd>
+        </div>
       </div>
 
       <!-- Overview cards -->
@@ -358,139 +505,49 @@
       </div>
     </section>
 
-    <!-- UTILITY -->
-    <section id="utility" class="space-y-6">
-      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Utility: What SmoovCoin Is For</h2>
-      <p class="text-sm sm:text-base text-slate-300 max-w-2xl">
-        SmoovCoin is built to plug into <span class="font-semibold">GALA Music</span> first, with room to expand into
-        the broader GALA ecosystem over time.
-      </p>
-
-      <div class="grid md:grid-cols-3 gap-4 text-sm">
-        <!-- Track Purchases -->
-        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-emerald-400/30 transition-colors">
-          <h3 class="font-semibold text-slate-200 mb-2 flex items-center gap-2">
-            <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-            </svg>
-            Track &amp; Collectible Purchases
-          </h3>
-          <p class="text-slate-300 mb-2">
-            SmoovCoin aims to become a preferred payment method for:
-          </p>
-          <ul class="list-disc list-inside text-slate-300 space-y-1">
-            <li>Individual tracks and singles</li>
-            <li>Album collectibles and bundles</li>
-            <li>Exclusive or limited releases</li>
-            <li>Artist-created digital goods</li>
-          </ul>
-        </div>
-
-        <!-- Creator Engagement -->
-        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-amber-400/30 transition-colors">
-          <h3 class="font-semibold text-slate-200 mb-2 flex items-center gap-2">
-            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-            Creator &amp; Fan Engagement
-          </h3>
-          <p class="text-slate-300 mb-2">
-            Artists can experiment with new Smoov-powered experiences:
-          </p>
-          <ul class="list-disc list-inside text-slate-300 space-y-1">
-            <li>Rewarding superfans and top supporters</li>
-            <li>Unlocking gated content and secret drops</li>
-            <li>Revenue-sharing experiments and collabs</li>
-          </ul>
-        </div>
-
-        <!-- Future Expansion -->
-        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-pink-500/30 transition-colors">
-          <h3 class="font-semibold text-slate-200 mb-2 flex items-center gap-2">
-            <svg class="w-5 h-5 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            Future Platform Utility
-          </h3>
-          <p class="text-slate-300 mb-2">
-            Possible future extensions of SmoovCoin include:
-          </p>
-          <ul class="list-disc list-inside text-slate-300 space-y-1">
-            <li>Staking for platform perks or boost</li>
-            <li>Access passes for exclusive drops</li>
-            <li>Community governance participation</li>
-            <li>Cross-platform spend across GALA games &amp; film</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- GOVERNANCE (optional stub) -->
-    <section class="space-y-4">
-      <h2 class="text-xl sm:text-2xl font-bold tracking-tight">Governance (Planned / Optional)</h2>
-      <p class="text-sm sm:text-base text-slate-300 max-w-2xl">
-        A future governance module may allow SmoovCoin holders to help steer ecosystem decisions — such as how
-        rewards are allocated, which artist grants get prioritized, and how the community treasury is deployed.
-      </p>
-      <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
-        <li>Ecosystem reward distribution</li>
-        <li>Artist &amp; partner grant programs</li>
-        <li>Treasury spending and experiments</li>
-        <li>Utility upgrades and roadmap proposals</li>
-      </ul>
-      <p class="text-[11px] text-slate-400">
-        Governance features are not guaranteed and may be introduced later depending on adoption, regulation, and
-        community interest.
-      </p>
-    </section>
 
     <!-- ROADMAP -->
     <section id="roadmap" class="space-y-6">
-      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Roadmap</h2>
-      <p class="text-sm sm:text-base text-slate-300 max-w-2xl">
-        The roadmap is intentionally simple and focused: ship the token, wire it into real music utilities, then
-        expand where it makes sense.
-      </p>
+      <div>
+        <p class="text-xs font-semibold text-amber-300 uppercase tracking-[0.25em]">The Journey</p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Loose roadmap</h2>
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mt-2">
+          No corporate decks. Just a rough sketch of how SmoovCoin could evolve alongside JP Cali Smoov's world if the community runs with it.
+        </p>
+      </div>
 
-      <div class="grid md:grid-cols-3 gap-4 text-sm">
+      <div class="space-y-4">
         <!-- Phase 1 -->
-        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-emerald-400/30 transition-colors relative">
-          <span class="absolute -top-3 left-4 text-[11px] px-2 py-0.5 rounded-full bg-emerald-400 text-slate-950 font-semibold shadow-lg">
-            Phase 1
-          </span>
-          <h3 class="font-semibold text-slate-200 mt-2 mb-2">Token Launch</h3>
-          <ul class="list-disc list-inside text-slate-300 space-y-1">
-            <li>Deploy SmoovCoin smart contract</li>
-            <li>Creator purchase of 50% supply</li>
-            <li>Seed initial liquidity pools</li>
-            <li>Begin integrating track purchases via GALA Music</li>
-          </ul>
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-emerald-400/30 transition-colors">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-400 text-slate-950 font-semibold">Phase 1</span>
+            <h3 class="font-semibold text-slate-200">Concept & lore</h3>
+          </div>
+          <p class="text-sm text-slate-300">
+            Lock in visuals, story and initial SmoovCoin concept around "OnAMission2ChangeThe🌎." Build the landing page, art, and social presence that sets the tone.
+          </p>
         </div>
 
         <!-- Phase 2 -->
-        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-amber-400/30 transition-colors relative">
-          <span class="absolute -top-3 left-4 text-[11px] px-2 py-0.5 rounded-full bg-amber-400 text-slate-950 font-semibold shadow-lg">
-            Phase 2
-          </span>
-          <h3 class="font-semibold text-slate-200 mt-2 mb-2">Platform Integration</h3>
-          <ul class="list-disc list-inside text-slate-300 space-y-1">
-            <li>Onboard additional artists and partners</li>
-            <li>Exclusive track drops purchasable in SmoovCoin</li>
-            <li>Engagement rewards for holders and playlist curators</li>
-          </ul>
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-amber-400/30 transition-colors">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-amber-400 text-slate-950 font-semibold">Phase 2</span>
+            <h3 class="font-semibold text-slate-200">Fan tools & missions</h3>
+          </div>
+          <p class="text-sm text-slate-300">
+            Community raids, playlists, listen parties, art contests, gated spaces, and integrations that treat $SMV as a badge for real fans — not just speculators.
+          </p>
         </div>
 
         <!-- Phase 3 -->
-        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-sky-400/30 transition-colors relative">
-          <span class="absolute -top-3 left-4 text-[11px] px-2 py-0.5 rounded-full bg-sky-400 text-slate-950 font-semibold shadow-lg">
-            Phase 3
-          </span>
-          <h3 class="font-semibold text-slate-200 mt-2 mb-2">Expansion</h3>
-          <ul class="list-disc list-inside text-slate-300 space-y-1">
-            <li>Staking and governance modules</li>
-            <li>Deeper cross-GALA ecosystem utility (games, film, more)</li>
-            <li>Broader partner integrations &amp; collabs</li>
-          </ul>
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-sky-400/30 transition-colors">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-sky-400 text-slate-950 font-semibold">Phase 3</span>
+            <h3 class="font-semibold text-slate-200">Metaverse expansions</h3>
+          </div>
+          <p class="text-sm text-slate-300">
+            Deeper metaverse experiences, collabs, shows, and cross-project experiments where JP Cali Smoov's universe and SmoovCoin overlap in weird, interesting ways. No guarantees. Just possibilities.
+          </p>
         </div>
       </div>
     </section>
@@ -514,6 +571,29 @@
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="border border-slate-800 rounded-2xl p-8 bg-gradient-to-br from-slate-900/60 to-slate-800/40 text-center space-y-4">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Ready to join the movement?</h2>
+      <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">
+        Get in early on SmoovCoin. No presale, no team allocation — just pure fair launch energy.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a
+          href="#tokenomics"
+          class="inline-flex items-center gap-2 rounded-full bg-emerald-400 text-slate-950 px-6 py-2 text-sm font-semibold shadow-lg shadow-emerald-400/30 hover:bg-emerald-300 transition"
+        >
+          Learn More
+        </a>
+        <a
+          href="https://music.gala.com/artists/jp-cali-smoov"
+          target="_blank"
+          class="inline-flex items-center gap-2 rounded-full border border-amber-400/50 text-amber-300 px-6 py-2 text-sm font-semibold hover:bg-amber-400/10 hover:border-amber-400 transition"
+        >
+          Listen on Gala Music
         </a>
       </div>
     </section>
@@ -611,8 +691,26 @@
     </section>
   </main>
 
-  <footer class="border-t border-slate-800 py-6 text-center text-[11px] text-slate-500">
-    <p>© <span id="year"></span> JP Cali Smoov · SmoovCoin. All rights reserved.</p>
+  <footer class="border-t border-slate-800 py-8 text-center space-y-4">
+    <div class="flex items-center justify-center gap-2 mb-4">
+      <img src="assets/tokenlogo.jpg" alt="SmoovCoin" class="w-8 h-8 rounded-full border border-amber-400/30 object-cover" />
+      <div class="text-left">
+        <p class="text-xs font-semibold text-slate-300">SmoovCoin</p>
+        <p class="text-[10px] text-slate-500">OnAMission2ChangeThe🌎</p>
+      </div>
+    </div>
+    <p class="text-xs text-slate-400 max-w-2xl mx-auto px-4">
+      A coin concept orbiting JP Cali Smoov's mission to change the world — built for people who actually care about the art and the movement.
+    </p>
+    <p class="text-[10px] text-slate-500 px-4">
+      This page is for creative and community purposes only. No promises, no financial advice, no guarantees.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 text-xs text-slate-400">
+      <a href="https://music.gala.com/artists/jp-cali-smoov" target="_blank" class="hover:text-amber-300 transition">Gala Music</a>
+      <a href="https://x.com/calismoov4life?s=21" target="_blank" class="hover:text-amber-300 transition">Twitter / X</a>
+      <a href="https://www.instagram.com/jpcalismoov?igsh=NTc4MTIwNjQ2YQ==" target="_blank" class="hover:text-amber-300 transition">Instagram</a>
+    </div>
+    <p class="text-[10px] text-slate-500 mt-4">© <span id="year"></span> SmoovCoin. All rights reserved.</p>
   </footer>
 
   <script>
