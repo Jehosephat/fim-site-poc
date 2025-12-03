@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{TOKEN_NAME}} × {{ARTIST_NAME}} – Official Memecoin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{{TOKEN_NAME}} is {{ARTIST_NAME}}'s community memecoin, built for music, culture, and the GALA Music ecosystem." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Simple glow animation for hero coin */
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 40px rgba(251,191,36,0.25); }
+      50% { box-shadow: 0 0 80px rgba(251,191,36,0.55); }
+    }
+    /* Subtle fade-in animation */
+    @keyframes fade-in {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fade-in 0.6s ease-out;
+    }
+    /* Scrolling banner animation */
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-scroll {
+      animation: scroll 30s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-50 antialiased">
+  <!-- Top Bar -->
+  <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur z-30 sticky top-0">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 group">
+        <div class="h-8 w-8 rounded-full bg-gradient-to-br from-amber-400 to-pink-500 flex items-center justify-center font-black text-slate-950 text-xs shadow-lg shadow-amber-400/30 group-hover:shadow-amber-400/50 transition-shadow">
+          {{TICKER_SYMBOL}}
+        </div>
+        <div>
+          <div class="font-semibold tracking-tight text-sm sm:text-base group-hover:text-amber-300 transition-colors">{{TOKEN_NAME}}</div>
+          <div class="text-[10px] text-amber-300/80 uppercase tracking-[0.2em]">{{ARTIST_NAME}}</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-amber-300 transition">Artist</a>
+        <a href="#tokenomics" class="hover:text-amber-300 transition">{{TOKEN_NAME}}</a>
+        <a href="#roadmap" class="hover:text-amber-300 transition">Roadmap</a>
+        <a href="#links" class="hover:text-amber-300 transition">Tracks</a>
+      </nav>
+      <a
+        href="{{GALA_MUSIC_URL}}"
+        target="_blank"
+        class="inline-flex items-center gap-2 rounded-full bg-amber-400 text-slate-950 px-4 py-1.5 text-xs sm:text-sm font-semibold shadow-lg shadow-amber-400/30 hover:bg-amber-300 transition"
+      >
+        Listen on GALA Music
+      </a>
+    </div>
+  </header>
+
+  <main id="top" class="max-w-6xl mx-auto px-4 pb-20 pt-10 space-y-20 sm:space-y-24">
+    <!-- HERO -->
+    <section class="grid md:grid-cols-2 gap-10 items-center animate-fade-in">
+      <div class="space-y-6">
+        <p class="text-xs font-semibold tracking-[0.35em] uppercase text-amber-300">
+          <span class="inline-flex items-center gap-1">{{HERO_BADGE}}</span> {{ARTIST_NAME}} • Artist Coin
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black tracking-tight leading-tight">
+          <span class="bg-gradient-to-r from-amber-400 via-pink-500 to-emerald-400 bg-clip-text text-transparent">
+            {{TOKEN_NAME}}:
+          </span>
+          <br />
+          <span class="text-slate-50">{{HERO_SUBTITLE}}</span>
+        </h1>
+        <p class="text-sm sm:text-base text-slate-300 max-w-xl">
+          {{HERO_DESCRIPTION}}
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="#tokenomics"
+            class="inline-flex items-center gap-2 rounded-full bg-emerald-400 text-slate-950 px-5 py-2 text-sm font-semibold shadow-lg shadow-emerald-400/30 hover:bg-emerald-300 transition"
+          >
+            How it works
+          </a>
+          <a
+            href="#links"
+            class="inline-flex items-center gap-2 rounded-full border border-slate-600 px-5 py-2 text-sm font-semibold hover:border-amber-300 hover:text-amber-200 transition"
+          >
+            Tap In
+          </a>
+        </div>
+
+        <dl class="grid grid-cols-3 gap-4 text-xs sm:text-sm">
+          <div>
+            <dt class="text-slate-400">Artist</dt>
+            <dd class="font-semibold">{{ARTIST_NAME}}</dd>
+          </div>
+          <div>
+            <dt class="text-slate-400">Ecosystem</dt>
+            <dd class="font-semibold">Gala Music</dd>
+          </div>
+          <div>
+            <dt class="text-slate-400">Ticker</dt>
+            <dd class="font-semibold">${{TICKER_SYMBOL}}</dd>
+          </div>
+        </dl>
+        <p class="text-xs text-slate-400 italic">{{TOKEN_TAGLINE}}</p>
+      </div>
+
+      <!-- Hero Visual -->
+      <div class="flex justify-center">
+        <div class="relative">
+          <div
+            class="h-52 w-52 sm:h-64 sm:w-64 rounded-full bg-gradient-to-br from-amber-400 via-pink-500 to-emerald-400 flex items-center justify-center animate-[pulse-glow_3s_ease-in-out_infinite] overflow-hidden"
+          >
+            {{#HERO_VIDEO}}
+            <video
+              src="{{ASSETS_PATH}}/{{HERO_VIDEO}}"
+              autoplay
+              loop
+              muted
+              playsinline
+              class="h-full w-full object-cover rounded-full"
+            >
+              <img
+                src="{{ASSETS_PATH}}/{{HERO_IMAGE}}"
+                alt="{{ARTIST_NAME}} - {{TOKEN_NAME}}"
+                class="h-full w-full object-cover rounded-full"
+              />
+            </video>
+            {{/HERO_VIDEO}}
+            {{^HERO_VIDEO}}
+            <img
+              src="{{ASSETS_PATH}}/{{HERO_IMAGE}}"
+              alt="{{ARTIST_NAME}} - {{TOKEN_NAME}}"
+              class="h-full w-full object-cover rounded-full"
+            />
+            {{/HERO_VIDEO}}
+          </div>
+          <div class="absolute -bottom-6 -right-4 bg-slate-900/90 border border-slate-700 rounded-2xl px-4 py-2 text-xs shadow-xl backdrop-blur-sm">
+            <p class="text-[10px] uppercase tracking-[0.25em] text-emerald-300 font-semibold mb-1">
+              {{HERO_BADGE_TEXT}}
+            </p>
+            <p class="text-slate-200">{{HERO_BADGE_DESCRIPTION}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCROLLING BANNER -->
+    <section class="relative w-full -mx-4 sm:-mx-6 overflow-hidden border-y border-slate-800 py-3">
+      <div class="flex animate-scroll whitespace-nowrap text-xs sm:text-sm text-slate-400">
+        <span class="mx-4">◆{{SCROLLING_BANNER_TEXT}}◆</span>
+        <span class="mx-4">◆{{SCROLLING_BANNER_TEXT}}◆</span>
+        <span class="mx-4">◆{{SCROLLING_BANNER_TEXT}}◆</span>
+        <span class="mx-4">◆{{SCROLLING_BANNER_TEXT}}◆</span>
+        <span class="mx-4">◆{{SCROLLING_BANNER_TEXT}}◆</span>
+      </div>
+    </section>
+
+    <!-- ABOUT ARTIST / TOKEN STORY -->
+    <section id="about" class="grid md:grid-cols-[1.1fr,0.9fr] gap-10 items-start">
+      <div class="space-y-4">
+        <p class="text-xs font-semibold text-amber-300 uppercase tracking-[0.25em]">The Artist</p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">{{ARTIST_NAME}}</h2>
+        <p class="text-sm sm:text-base text-slate-300">
+          {{ARTIST_DESCRIPTION}}
+        </p>
+        <div class="grid sm:grid-cols-2 gap-4 pt-4">
+          {{#ARTIST_FEATURES}}
+          <div class="space-y-2">
+            <div class="flex items-center gap-2 text-sm">
+              <span class="text-lg">{{ICON}}</span>
+              <h3 class="font-semibold text-slate-200">{{TITLE}}</h3>
+            </div>
+            <p class="text-xs text-slate-400">
+              {{DESCRIPTION}}
+            </p>
+          </div>
+          {{/ARTIST_FEATURES}}
+        </div>
+        <div class="pt-4 flex items-center gap-3">
+          <img
+            src="{{ASSETS_PATH}}/{{PROFILE_IMAGE}}"
+            alt="{{ARTIST_NAME}}"
+            class="w-16 h-16 rounded-full border-2 border-amber-400/50 object-cover"
+          />
+          <div>
+            <p class="text-xs text-slate-400 uppercase tracking-[0.2em]">Artist Profile</p>
+            <p class="text-sm font-semibold text-amber-300">{{ARTIST_PROFILE_TAGLINE}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-3 border border-slate-800 rounded-3xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-amber-400/30 transition-colors">
+        <h3 class="font-semibold text-sm text-slate-200 uppercase tracking-[0.25em] flex items-center gap-2">
+          <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Quick Facts
+        </h3>
+        <dl class="space-y-2 text-sm">
+          <div class="flex justify-between gap-4">
+            <dt class="text-slate-400">Token Name</dt>
+            <dd class="font-semibold">{{TOKEN_NAME}} ({{TICKER_SYMBOL}})</dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-slate-400">Total Supply</dt>
+            <dd class="font-semibold">{{TOTAL_SUPPLY}}</dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-slate-400">Supply Type</dt>
+            <dd class="font-semibold">{{SUPPLY_TYPE}}</dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-slate-400">Blockchain</dt>
+            <dd class="font-semibold text-amber-200">
+              {{BLOCKCHAIN}}
+            </dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-slate-400">Primary Utility</dt>
+            <dd class="font-semibold">{{PRIMARY_UTILITY}}*</dd>
+          </div>
+        </dl>
+        <p class="text-[11px] text-slate-400">
+          *{{UTILITY_DISCLAIMER}}
+        </p>
+      </div>
+    </section>
+
+    <!-- THE CONCEPT -->
+    <section class="space-y-6">
+      <div>
+        <p class="text-xs font-semibold text-amber-300 uppercase tracking-[0.25em]">The Concept</p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">What is {{TOKEN_NAME}}?</h2>
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mt-2">
+          {{CONCEPT_DESCRIPTION}}
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm">
+          <h3 class="font-semibold text-slate-200 mb-3 flex items-center gap-2">
+            <span class="text-lg">💡</span>
+            The idea
+          </h3>
+          <ul class="space-y-2 text-sm text-slate-300">
+            {{#CONCEPT_IDEAS}}
+            <li class="flex items-start gap-2">
+              <span class="text-amber-400 mt-1">→</span>
+              <span>{{.}}</span>
+            </li>
+            {{/CONCEPT_IDEAS}}
+          </ul>
+        </div>
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm">
+          <h3 class="font-semibold text-slate-200 mb-3 flex items-center gap-2">
+            <span class="text-lg">🔥</span>
+            The vibe
+          </h3>
+          <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+            {{#CONCEPT_VIBES}}
+            <li>{{.}}</li>
+            {{/CONCEPT_VIBES}}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY IT MAKES SENSE -->
+    <section class="space-y-6">
+      <div>
+        <p class="text-xs font-semibold text-amber-300 uppercase tracking-[0.25em]">The Reason</p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Why it actually makes sense</h2>
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mt-2">
+          {{REASON_DESCRIPTION}}
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-4">
+        {{#REASON_POINTS}}
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm">
+          <h3 class="font-semibold text-slate-200 mb-2 flex items-center gap-2">
+            <span class="text-lg">{{ICON}}</span>
+            {{TITLE}}
+          </h3>
+          {{#BULLET_POINTS}}
+          <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+            {{#.}}
+            <li>{{.}}</li>
+            {{/.}}
+          </ul>
+          {{/BULLET_POINTS}}
+          {{^BULLET_POINTS}}
+          <p class="text-sm text-slate-300">
+            {{DESCRIPTION}}
+          </p>
+          {{/BULLET_POINTS}}
+        </div>
+        {{/REASON_POINTS}}
+      </div>
+    </section>
+
+    <!-- TOKENOMICS -->
+    <section id="tokenomics" class="space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-end gap-3 justify-between">
+        <div>
+          <p class="text-xs font-semibold text-amber-300 uppercase tracking-[0.25em]">The Details</p>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Fair Launch Tokenomics</h2>
+          <p class="text-sm sm:text-base text-slate-300 max-w-2xl mt-2">
+            {{TOKENOMICS_DESCRIPTION}}
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          {{#TOKENOMICS_BADGES}}
+          <span class="inline-flex items-center rounded-full border border-slate-700 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-slate-300">
+            {{.}}
+          </span>
+          {{/TOKENOMICS_BADGES}}
+        </div>
+      </div>
+
+      <!-- Token Details -->
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm">
+        <div>
+          <dt class="text-xs text-slate-400 uppercase tracking-[0.25em] mb-1">Name</dt>
+          <dd class="font-semibold text-sm">{{TOKEN_NAME}}</dd>
+        </div>
+        <div>
+          <dt class="text-xs text-slate-400 uppercase tracking-[0.25em] mb-1">Ticker</dt>
+          <dd class="font-semibold text-sm">${{TICKER_SYMBOL}}</dd>
+        </div>
+        <div>
+          <dt class="text-xs text-slate-400 uppercase tracking-[0.25em] mb-1">Total Supply</dt>
+          <dd class="font-semibold text-sm">{{TOTAL_SUPPLY}} {{TICKER_SYMBOL}}</dd>
+        </div>
+        <div>
+          <dt class="text-xs text-slate-400 uppercase tracking-[0.25em] mb-1">Supply Type</dt>
+          <dd class="font-semibold text-sm">{{SUPPLY_TYPE}}</dd>
+        </div>
+      </div>
+
+      <!-- Overview cards -->
+      <div class="grid sm:grid-cols-3 gap-4">
+        <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 backdrop-blur-sm hover:border-amber-400/30 transition-colors">
+          <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-[0.25em] mb-2">Total Supply</h3>
+          <p class="text-lg font-semibold">{{TOTAL_SUPPLY}} {{TICKER_SYMBOL}}</p>
+          <p class="text-xs text-slate-400 mt-1">{{SUPPLY_DESCRIPTION}}</p>
+        </div>
+        <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 backdrop-blur-sm hover:border-pink-500/30 transition-colors">
+          <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-[0.25em] mb-2">Creator Buy-In</h3>
+          <p class="text-lg font-semibold">{{CREATOR_BUY_IN_PERCENTAGE}}% at Genesis</p>
+          <p class="text-xs text-slate-400 mt-1">
+            {{CREATOR_BUY_IN_DESCRIPTION}}
+          </p>
+        </div>
+        <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 backdrop-blur-sm hover:border-emerald-400/30 transition-colors">
+          <h3 class="text-xs font-semibold text-slate-400 uppercase tracking-[0.25em] mb-2">Public & Ecosystem</h3>
+          <p class="text-lg font-semibold">{{PUBLIC_PERCENTAGE}}% for the Community</p>
+          <p class="text-xs text-slate-400 mt-1">
+            {{PUBLIC_DESCRIPTION}}
+          </p>
+        </div>
+      </div>
+
+      <!-- Allocation breakdown -->
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Creator allocation -->
+        <div class="space-y-3 border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-amber-400/30 transition-colors">
+          <h3 class="font-semibold text-sm text-slate-200 uppercase tracking-[0.25em]">
+            1. Token Creator Allocation — {{CREATOR_BUY_IN_PERCENTAGE}}%
+          </h3>
+          <p class="text-sm text-slate-300">
+            At launch, the creator purchases <span class="font-semibold">{{CREATOR_BUY_IN_AMOUNT}} {{TICKER_SYMBOL}} ({{CREATOR_BUY_IN_PERCENTAGE}}%)</span> of the supply.
+            This:
+          </p>
+          <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+            {{#CREATOR_ALLOCATION_BENEFITS}}
+            <li>{{.}}</li>
+            {{/CREATOR_ALLOCATION_BENEFITS}}
+          </ul>
+          <p class="text-xs text-slate-400 pt-1">
+            {{CREATOR_VESTING_NOTE}}
+          </p>
+        </div>
+
+        <!-- Public & ecosystem allocation -->
+        <div class="space-y-4 border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-emerald-400/30 transition-colors">
+          <h3 class="font-semibold text-sm text-slate-200 uppercase tracking-[0.25em]">
+            2. Public & Ecosystem Allocation — {{PUBLIC_PERCENTAGE}}%
+          </h3>
+
+          <div class="space-y-3 text-sm">
+            {{#PUBLIC_ALLOCATIONS}}
+            <div>
+              <div class="flex justify-between text-slate-300 text-xs mb-1">
+                <span>{{LABEL}}</span>
+                <span>{{PERCENTAGE}}% • {{AMOUNT}} {{TICKER_SYMBOL}}</span>
+              </div>
+              <div class="h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full {{COLOR_CLASS}}" style="width:{{PERCENTAGE}}%"></div>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">
+                {{DESCRIPTION}}
+              </p>
+            </div>
+            {{/PUBLIC_ALLOCATIONS}}
+          </div>
+        </div>
+      </div>
+
+      <!-- Market Dynamics -->
+      <div class="grid lg:grid-cols-3 gap-4 text-sm">
+        {{#MARKET_DYNAMICS}}
+        <div class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40">
+          <h3 class="text-xs font-semibold text-slate-300 uppercase tracking-[0.25em] mb-2">{{TITLE}}</h3>
+          {{#BULLET_POINTS}}
+          <ul class="list-disc list-inside text-slate-300 space-y-1">
+            {{#.}}
+            <li>{{.}}</li>
+            {{/.}}
+          </ul>
+          {{/BULLET_POINTS}}
+          {{^BULLET_POINTS}}
+          <p class="text-slate-300">
+            {{DESCRIPTION}}
+          </p>
+          {{/BULLET_POINTS}}
+        </div>
+        {{/MARKET_DYNAMICS}}
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section id="roadmap" class="space-y-6">
+      <div>
+        <p class="text-xs font-semibold text-amber-300 uppercase tracking-[0.25em]">The Journey</p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Loose roadmap</h2>
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mt-2">
+          {{ROADMAP_DESCRIPTION}}
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        {{#ROADMAP_PHASES}}
+        <div class="border border-slate-800 rounded-2xl p-5 bg-slate-900/40 backdrop-blur-sm hover:border-{{COLOR}}-400/30 transition-colors">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-[11px] px-2 py-0.5 rounded-full bg-{{COLOR}}-400 text-slate-950 font-semibold">{{PHASE_LABEL}}</span>
+            <h3 class="font-semibold text-slate-200">{{TITLE}}</h3>
+          </div>
+          <p class="text-sm text-slate-300">
+            {{DESCRIPTION}}
+          </p>
+        </div>
+        {{/ROADMAP_PHASES}}
+      </div>
+    </section>
+
+    <!-- FEATURED TRACKS -->
+    <section class="space-y-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Featured Tracks on GALA Music</h2>
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mt-2">
+          {{TRACKS_DESCRIPTION}}
+        </p>
+      </div>
+
+      {{#TRACK_IMAGES}}
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        {{#.}}
+        <a
+          href="{{GALA_MUSIC_URL}}"
+          target="_blank"
+          class="group relative aspect-square rounded-xl overflow-hidden border border-slate-800 hover:border-amber-300 transition-all hover:scale-105"
+        >
+          <img
+            src="{{IMAGE_URL}}"
+            alt="{{TRACK_NAME}}"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-2 text-[10px] font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            {{TRACK_NAME}}
+          </div>
+        </a>
+        {{/.}}
+      </div>
+      {{/TRACK_IMAGES}}
+      {{^TRACK_IMAGES}}
+      <div class="text-center">
+        <a
+          href="{{GALA_MUSIC_URL}}"
+          target="_blank"
+          class="inline-flex items-center gap-2 rounded-full border border-amber-400/50 text-amber-300 px-6 py-2 text-sm font-semibold hover:bg-amber-400/10 hover:border-amber-400 transition"
+        >
+          View All Tracks on GALA Music
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+      {{/TRACK_IMAGES}}
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="border border-slate-800 rounded-2xl p-8 bg-gradient-to-br from-slate-900/60 to-slate-800/40 text-center space-y-4">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">{{CTA_TITLE}}</h2>
+      <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">
+        {{CTA_DESCRIPTION}}
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a
+          href="#tokenomics"
+          class="inline-flex items-center gap-2 rounded-full bg-emerald-400 text-slate-950 px-6 py-2 text-sm font-semibold shadow-lg shadow-emerald-400/30 hover:bg-emerald-300 transition"
+        >
+          {{CTA_BUTTON_1_TEXT}}
+        </a>
+        <a
+          href="{{GALA_MUSIC_URL}}"
+          target="_blank"
+          class="inline-flex items-center gap-2 rounded-full border border-amber-400/50 text-amber-300 px-6 py-2 text-sm font-semibold hover:bg-amber-400/10 hover:border-amber-400 transition"
+        >
+          {{CTA_BUTTON_2_TEXT}}
+        </a>
+      </div>
+    </section>
+
+    <!-- LINKS / SOCIALS -->
+    <section id="links" class="space-y-5">
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Tap In</h2>
+      <p class="text-sm sm:text-base text-slate-300 max-w-2xl">
+        {{SOCIALS_DESCRIPTION}}
+      </p>
+
+      <div class="grid sm:grid-cols-3 gap-4 text-sm">
+        <a
+          href="{{GALA_MUSIC_URL}}"
+          target="_blank"
+          class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 hover:border-amber-300 hover:bg-slate-900 transition flex flex-col justify-between backdrop-blur-sm group"
+        >
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <img
+                src="{{ASSETS_PATH}}/{{SOCIAL_IMAGE}}"
+                alt="GALA Music"
+                class="w-8 h-8 rounded-full border border-amber-400/30 object-cover group-hover:border-amber-400 transition"
+              />
+              <h3 class="font-semibold text-slate-50">GALA Music</h3>
+            </div>
+            <p class="text-slate-300 text-xs">
+              {{GALA_MUSIC_DESCRIPTION}}
+            </p>
+          </div>
+          <span class="mt-3 text-[11px] text-amber-300 uppercase tracking-[0.2em]">
+            music.gala.com
+          </span>
+        </a>
+
+        {{#SOCIAL_LINKS}}
+        <a
+          href="{{URL}}"
+          target="_blank"
+          class="border border-slate-800 rounded-2xl p-4 bg-slate-900/40 hover:border-amber-300 hover:bg-slate-900 transition flex flex-col justify-between backdrop-blur-sm group"
+        >
+          <div>
+            <h3 class="font-semibold text-slate-50 mb-1 flex items-center gap-2">
+              {{#ICON_SVG}}
+              <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-300 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                {{.}}
+              </svg>
+              {{/ICON_SVG}}
+              {{PLATFORM_NAME}}
+            </h3>
+            <p class="text-slate-300 text-xs">
+              {{DESCRIPTION}}
+            </p>
+          </div>
+          <span class="mt-3 text-[11px] text-amber-300 uppercase tracking-[0.2em]">
+            {{HANDLE}}
+          </span>
+        </a>
+        {{/SOCIAL_LINKS}}
+      </div>
+    </section>
+
+    <!-- LEGAL -->
+    <section class="space-y-3 text-[11px] border border-slate-800 rounded-2xl p-4 bg-slate-900/60">
+      <h2 class="font-semibold text-slate-200 uppercase tracking-[0.25em] text-xs">
+        Legal &amp; Compliance Notice
+      </h2>
+      <p class="text-slate-400">
+        {{LEGAL_NOTICE_1}}
+      </p>
+      <p class="text-slate-400">
+        {{LEGAL_NOTICE_2}}
+      </p>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-800 py-8 text-center space-y-4">
+    <div class="flex items-center justify-center gap-2 mb-4">
+      <img src="{{ASSETS_PATH}}/{{FOOTER_IMAGE}}" alt="{{TOKEN_NAME}}" class="w-8 h-8 rounded-full border border-amber-400/30 object-cover" />
+      <div class="text-left">
+        <p class="text-xs font-semibold text-slate-300">{{TOKEN_NAME}}</p>
+        <p class="text-[10px] text-slate-500">{{FOOTER_TAGLINE}}</p>
+      </div>
+    </div>
+    <p class="text-xs text-slate-400 max-w-2xl mx-auto px-4">
+      {{FOOTER_DESCRIPTION}}
+    </p>
+    <p class="text-[10px] text-slate-500 px-4">
+      {{FOOTER_DISCLAIMER}}
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 text-xs text-slate-400">
+      <a href="{{GALA_MUSIC_URL}}" target="_blank" class="hover:text-amber-300 transition">Gala Music</a>
+      {{#FOOTER_SOCIAL_LINKS}}
+      <a href="{{URL}}" target="_blank" class="hover:text-amber-300 transition">{{LABEL}}</a>
+      {{/FOOTER_SOCIAL_LINKS}}
+    </div>
+    <p class="text-[10px] text-slate-500 mt-4">© <span id="year"></span> {{TOKEN_NAME}}. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

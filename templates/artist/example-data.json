@@ -1,0 +1,209 @@
+{
+  "TOKEN_NAME": "SmoovCoin",
+  "TICKER_SYMBOL": "SMV",
+  "ARTIST_NAME": "JP Cali Smoov",
+  "ASSETS_PATH": "assets",
+  "HERO_BADGE": "LIVE",
+  "HERO_SUBTITLE": "The West Coast Memecoin Movement",
+  "HERO_DESCRIPTION": "A fan-powered coin orbiting JP Cali Smoov's mission to change the world. Battle rap, community, and music culture blended into one on-chain story.",
+  "TOKEN_TAGLINE": "SmoovCoin — On a mission to change the world, one bar at a time.",
+  "HERO_IMAGE": "tokenlogo.jpg",
+  "HERO_VIDEO": "rotating-coin.mp4",
+  "HERO_BADGE_TEXT": "🎤 BATTLE TESTED",
+  "HERO_BADGE_DESCRIPTION": "Real bars, real community, real utility.",
+  "SCROLLING_BANNER_TEXT": "JP Cali Smoov • OnAMission2ChangeThe🌎 • SmoovCoin • Battle rap meets Web3",
+  "ARTIST_DESCRIPTION": "A battle rap champion, community activist, and genre-bending force whose catalog stretches from gritty West Coast hip-hop to cinematic metaverse experiences — now bringing that same energy into Web3 and on-chain fandom.",
+  "ARTIST_PROFILE_TAGLINE": "JP Cali Smoov",
+  "PROFILE_IMAGE": "tokenlogo.jpg",
+  "ARTIST_FEATURES": [
+    {
+      "ICON": "🎤",
+      "TITLE": "Battle-tested bars",
+      "DESCRIPTION": "Winner of Hitman Holla's reality show. Real battle rap credentials, not just studio polish."
+    },
+    {
+      "ICON": "🌐",
+      "TITLE": "Metaverse-native",
+      "DESCRIPTION": "From GALA Film series to on-chain releases, the catalog is designed to live in a Web3 era."
+    },
+    {
+      "ICON": "✊🏾",
+      "TITLE": "Community first",
+      "DESCRIPTION": "Food drives, community work, and real engagement — not just music, but movement."
+    },
+    {
+      "ICON": "🎵",
+      "TITLE": "Story-driven music",
+      "DESCRIPTION": "Projects like \"Cry Baby\" turn into narratives, visuals, and live moments that reward real fans."
+    }
+  ],
+  "TOTAL_SUPPLY": "10,000,000",
+  "SUPPLY_TYPE": "Fixed, non-inflationary",
+  "BLOCKCHAIN": "TBD – designed for GALA Music integration",
+  "PRIMARY_UTILITY": "Purchasing tracks & drops via GALA Music",
+  "UTILITY_DISCLAIMER": "Exact integration details and supported platforms will be announced at launch.",
+  "CONCEPT_DESCRIPTION": "SmoovCoin is a memetic, music-driven coin concept inspired by JP Cali Smoov's mission to change the world. It's about fans moving with the artist, not just watching from the timeline.",
+  "CONCEPT_IDEAS": [
+    "Connect the energy of JP's on-chain drops with a simple, recognizable coin: $SMV.",
+    "Turn \"OnAMission2ChangeThe🌎\" from a tagline into a banner the community can rally behind.",
+    "Build tools, art and utilities around music culture, not corporate roadmaps."
+  ],
+  "CONCEPT_VIBES": [
+    "Music first, memes second, nonsense third.",
+    "Fans as co-pilots, not background characters.",
+    "A coin that exists because the music and its world deserved its own symbol."
+  ],
+  "REASON_DESCRIPTION": "Artist-driven coins only work when the artist lives in the space. JP has already been building with Web3 tech, GALA Film series, and on-chain music drops — SmoovCoin just gives the movement a ticker.",
+  "REASON_POINTS": [
+    {
+      "ICON": "⛓️",
+      "TITLE": "Music that already lives on-chain",
+      "BULLET_POINTS": [
+        "Tracks and moments built for digital ownership, not just ads.",
+        "Fans used to collecting, not just streaming and forgetting.",
+        "A catalog that fits naturally into a token-backed universe."
+      ]
+    },
+    {
+      "ICON": "🎨",
+      "TITLE": "Culture > speculation",
+      "BULLET_POINTS": [
+        "Built around songs, visuals and shows.",
+        "Memes and lore pulled from real releases and moments.",
+        "No fake promises — it's about music culture and community."
+      ]
+    },
+    {
+      "ICON": "🚀",
+      "TITLE": "Mission-driven movement",
+      "DESCRIPTION": "SmoovCoin takes the \"OnAMission2ChangeThe🌎\" banner and turns it into a unit of hype. Tracks, drops, community work and experiences can all orbit around the same symbol: $SMV."
+    }
+  ],
+  "TOKENOMICS_DESCRIPTION": "SmoovCoin launches with a fixed supply and clear allocation. No confusing math, no runaway emissions — just real music-driven demand.",
+  "TOKENOMICS_BADGES": ["Fair Launch", "No Presale"],
+  "SUPPLY_DESCRIPTION": "Permanently capped, no inflation.",
+  "CREATOR_BUY_IN_PERCENTAGE": "50",
+  "CREATOR_BUY_IN_AMOUNT": "5,000,000",
+  "CREATOR_BUY_IN_DESCRIPTION": "JP Cali Smoov purchases 5,000,000 SMV to seed liquidity and show skin in the game.",
+  "PUBLIC_PERCENTAGE": "50",
+  "PUBLIC_DESCRIPTION": "Liquidity, incentives, grants, and a community treasury.",
+  "CREATOR_ALLOCATION_BENEFITS": [
+    "Establishes early liquidity and a natural price floor",
+    "Shows founder confidence and real economic commitment",
+    "Helps stabilize the market in the earliest days of trading"
+  ],
+  "CREATOR_VESTING_NOTE": "Creator-owned tokens may later be subject to vesting or lock-up terms if a governance or vesting module is introduced.",
+  "PUBLIC_ALLOCATIONS": [
+    {
+      "LABEL": "Public Liquidity & Market Launch",
+      "PERCENTAGE": "20",
+      "AMOUNT": "2,000,000",
+      "COLOR_CLASS": "bg-emerald-400",
+      "DESCRIPTION": "AMM pools, DEX listings, and liquidity for trading."
+    },
+    {
+      "LABEL": "Ecosystem Incentives",
+      "PERCENTAGE": "15",
+      "AMOUNT": "1,500,000",
+      "COLOR_CLASS": "bg-amber-400",
+      "DESCRIPTION": "Rewards for early adopters, playlists, and engagement quests."
+    },
+    {
+      "LABEL": "Artist & Partner Grants",
+      "PERCENTAGE": "10",
+      "AMOUNT": "1,000,000",
+      "COLOR_CLASS": "bg-pink-500",
+      "DESCRIPTION": "Incentivizing musicians, collabs, and exclusive GALA Music releases."
+    },
+    {
+      "LABEL": "Community Treasury",
+      "PERCENTAGE": "5",
+      "AMOUNT": "500,000",
+      "COLOR_CLASS": "bg-sky-400",
+      "DESCRIPTION": "Governance, platform experiments, and future marketing."
+    }
+  ],
+  "MARKET_DYNAMICS": [
+    {
+      "TITLE": "Fixed Supply",
+      "DESCRIPTION": "The 10M SMV cap is permanent. As demand grows, scarcity becomes part of the value story."
+    },
+    {
+      "TITLE": "Demand Drivers",
+      "BULLET_POINTS": [
+        "Track and album purchases",
+        "Artist-led campaigns and drops",
+        "Engagement rewards and playlists",
+        "Secondary market trading & collectibles"
+      ]
+    },
+    {
+      "TITLE": "Liquidity Strategy",
+      "DESCRIPTION": "A portion of supply is dedicated to DEX/AMM liquidity pools, paired with stablecoins or native chain assets to support low-slippage trading and healthy price discovery."
+    }
+  ],
+  "ROADMAP_DESCRIPTION": "No corporate decks. Just a rough sketch of how SmoovCoin could evolve alongside JP Cali Smoov's world if the community runs with it.",
+  "ROADMAP_PHASES": [
+    {
+      "PHASE_LABEL": "Phase 1",
+      "TITLE": "Concept & lore",
+      "DESCRIPTION": "Lock in visuals, story and initial SmoovCoin concept around \"OnAMission2ChangeThe🌎.\" Build the landing page, art, and social presence that sets the tone.",
+      "COLOR": "emerald"
+    },
+    {
+      "PHASE_LABEL": "Phase 2",
+      "TITLE": "Fan tools & missions",
+      "DESCRIPTION": "Community raids, playlists, listen parties, art contests, gated spaces, and integrations that treat $SMV as a badge for real fans — not just speculators.",
+      "COLOR": "amber"
+    },
+    {
+      "PHASE_LABEL": "Phase 3",
+      "TITLE": "Metaverse expansions",
+      "DESCRIPTION": "Deeper metaverse experiences, collabs, shows, and cross-project experiments where JP Cali Smoov's universe and SmoovCoin overlap in weird, interesting ways. No guarantees. Just possibilities.",
+      "COLOR": "sky"
+    }
+  ],
+  "TRACKS_DESCRIPTION": "Own these tracks and earn daily token distributions based on listens. The more popular the track, the greater the rewards.",
+  "TRACK_IMAGES": [],
+  "CTA_TITLE": "Ready to join the movement?",
+  "CTA_DESCRIPTION": "Get in early on SmoovCoin. No presale, no team allocation — just pure fair launch energy.",
+  "CTA_BUTTON_1_TEXT": "Learn More",
+  "CTA_BUTTON_2_TEXT": "Listen on Gala Music",
+  "SOCIALS_DESCRIPTION": "Follow JP Cali Smoov, listen to the music, and keep up with SmoovCoin announcements and drops.",
+  "SOCIAL_IMAGE": "tokenlogo.jpg",
+  "GALA_MUSIC_DESCRIPTION": "Listen to JP Cali Smoov, explore drops, and see how Web3 music works.",
+  "GALA_MUSIC_URL": "https://music.gala.com/artists/jp-cali-smoov",
+  "SOCIAL_LINKS": [
+    {
+      "PLATFORM_NAME": "X (Twitter)",
+      "URL": "https://x.com/calismoov4life?s=21",
+      "DESCRIPTION": "Get SmoovCoin updates, memes, and live commentary straight from JP Cali Smoov.",
+      "HANDLE": "@calismoov4life",
+      "ICON_SVG": "<path d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z\"/>"
+    },
+    {
+      "PLATFORM_NAME": "Instagram",
+      "URL": "https://www.instagram.com/jpcalismoov?igsh=NTc4MTIwNjQ2YQ==",
+      "DESCRIPTION": "Behind-the-scenes, visuals, and stories from the Smoov ecosystem.",
+      "HANDLE": "@jpcalismoov",
+      "ICON_SVG": "<path d=\"M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z\"/>"
+    }
+  ],
+  "LEGAL_NOTICE_1": "SmoovCoin is designed as a utility token intended for use within digital music and media ecosystems. It is not being positioned as a security or investment contract. No guarantees are made regarding price, liquidity, or future appreciation.",
+  "LEGAL_NOTICE_2": "Participants should independently assess all applicable legal, tax, and regulatory obligations in their jurisdiction before acquiring or using SmoovCoin. Early-stage crypto assets can be highly volatile and may carry a risk of partial or total loss.",
+  "FOOTER_IMAGE": "tokenlogo.jpg",
+  "FOOTER_TAGLINE": "OnAMission2ChangeThe🌎",
+  "FOOTER_DESCRIPTION": "A coin concept orbiting JP Cali Smoov's mission to change the world — built for people who actually care about the art and the movement.",
+  "FOOTER_DISCLAIMER": "This page is for creative and community purposes only. No promises, no financial advice, no guarantees.",
+  "FOOTER_SOCIAL_LINKS": [
+    {
+      "URL": "https://x.com/calismoov4life?s=21",
+      "LABEL": "Twitter / X"
+    },
+    {
+      "URL": "https://www.instagram.com/jpcalismoov?igsh=NTc4MTIwNjQ2YQ==",
+      "LABEL": "Instagram"
+    }
+  ]
+}
+
